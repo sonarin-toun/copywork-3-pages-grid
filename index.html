@@ -4,11 +4,14 @@
         <meta charset="utf-8">
         <link href="styles/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <title>Cat Photo App</title>
     </head>
     <body>
         <!-- <h1>Hello World</h1> --> <!--Heading 2-->
             <h2>CatPhotoApp</h2> <!--Heading 3-->
             <main>
+                <a href="#footer">Jump to Bottom</a> <br>
+                <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="Ginger Kitten"></a> <!--Image-->
                 <p> <!--Normal Text-->
                     Kitty ipsum dolor sit amet, 
                     shed everywhere shed everywhere stretching attack your ankles chase the red dot, 
@@ -18,6 +21,53 @@
                     Purr jump eat the grass rip the couch scratched sunbathe, 
                     shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
                 </p>
+                <p>
+                    Click here to view more <a target="_blank" href="https://www.pexels.com/search/cat/">cat photos</a>
+                </p>
+                <div>
+                    <p>Things cats love:</p>
+                        <ul>
+                            <li>cat nip</li>
+                            <li>laser pointer</li>
+                            <li>fish</li>
+                        </ul>
+                    <p>Top 3 things cats hate:</p>
+                    <ol>
+                        <li>flea treatment</li>
+                        <li>thunder</li>
+                        <li>other cats</li>
+                    </ol>
+                </div>
+                <form action="#">
+                    <input type="text" required placeholder="Your cat's name">
+                    <button type="submit">Submit</button>
+                    <br>
+                    <label for="indoor">
+                        <input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked>
+                        Indoor
+                    </label>
+                    <label for="outdoor">
+                        <input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor">
+                        Outdoor
+                    </label>
+                    <br>
+                    <label for="loving">
+                        <input id="loving" type="checkbox" name="personality" value="loving" checked>
+                        Loving
+                    </label>
+                    <label for="aloof">
+                        <input id="aloof" type="checkbox" name="personality" value="aloof">
+                        Aloof
+                    </label>
+                    <label for="lazy">
+                        <input id="lazy" type="checkbox" name="personality" value="lazy">
+                        Lazy
+                    </label>
+                </form>
             </main>
+            <footer id="footer">
+                Copyright Cat Photo App
+            </footer>
+            
     </body>
 </html>
