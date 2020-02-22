@@ -1,3 +1,49 @@
+:root{
+    --primary-blue: hsl(201, 79%, 46%);
+}
+
+@media{
+
+} /*media to response to device width*/
+4
+
 html {
     font-family: 'Roboto', sans-serif;
+    padding: 16px;
+    margin: 16px;
+}
+
+h2 {
+    background-color: var(--primary-blue);
+    font-family: 'Roboto Slab', serif;
+    font-size: 60px;
+    color: hsl(216, 33%, 97%)
+}
+
+p {
+    font-size: 16px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.image {
+    width: 512px;
+}
+
+.image-border {
+    border-width: 8px;
+    border-color: hsl(210, 16%, 82%);
+    border-style: solid;
+    border-radius: 5%;
+}
+
+#form-section {
+    background-color: var(--primary-blue);
+}
+
+
+[type="radio"], [type="checkbox"] {
+    margin: 20px 0px 20px 0px;
 }
