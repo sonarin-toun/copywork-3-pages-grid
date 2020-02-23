@@ -2,26 +2,41 @@
     --primary-blue: hsl(201, 79%, 46%);
 }
 
-@media{
-
-} /*media to response to device width*/
-4
-
 html {
     font-family: 'Roboto', sans-serif;
+    color: hsl(210, 24%, 16%);
     padding: 16px;
     margin: 16px;
 }
 
 h2 {
+    position: relative;
+    top: 16px;
+    text-align: center;
     background-color: var(--primary-blue);
     font-family: 'Roboto Slab', serif;
     font-size: 60px;
     color: hsl(216, 33%, 97%)
 }
 
+li {
+    position: relative;
+    left: 48px;
+    width: 512px;
+}
+
+ul, ol {
+    width: 512px;
+    padding: 16px 0px 16px 0px;
+    line-height: 150%;
+    margin: 0 auto;
+}
+
 p {
-    font-size: 16px;
+    width: 512px;
+    padding: 16px 0px 16px 0px;
+    line-height: 150%;
+    margin: 0 auto;
 }
 
 .bold {
@@ -30,6 +45,9 @@ p {
 
 .image {
     width: 512px;
+    height: 512px;
+    margin: 16px 0px 16px 0px;
+    box-shadow: 0 3px 6px hsla(0, 0%, 0%, .15), 0 2px 4px hsla(0, 0%, 0%, .12);
 }
 
 .image-border {
@@ -43,6 +61,13 @@ p {
     background-color: var(--primary-blue);
 }
 
+.link:visited {
+    color: hsl(210, 16%, 82%);
+}
+
+.link:hover {
+    color: hsl(10, 93%, 40%);
+}
 
 [type="radio"], [type="checkbox"] {
     margin: 20px 0px 20px 0px;
