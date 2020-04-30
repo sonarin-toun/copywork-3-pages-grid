@@ -25,7 +25,7 @@
     1.0 RESET
    =============== */
 
-   * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -163,13 +163,16 @@ img {
 
 /* === 4.4.A Section Grid === */
 
-.hero__image {
+.hero__image,
+.card__image {
     grid-row-start: 1;
 }
 
-.caption {
+.caption,
+.card__caption {
     grid-row-start: 2;
 }
+
 
 /* =================================================
     5.0 Layout, Spacing, Border and Background Color
@@ -204,7 +207,7 @@ img {
     padding-bottom: 2rem;
 }
 
-/* === 5.2.A Caption === */
+/* === 5.2.B Caption === */
 
 .caption__element {
     grid-template-columns: auto auto;
@@ -215,6 +218,13 @@ img {
 .caption__date {
     border-right: solid 1px rgba(112, 112, 112, 0.2);
     padding-right: 0.5rem;
+}
+
+/* === 5.2.C Card === */
+
+.card {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 /* =====================
@@ -282,7 +292,8 @@ img {
 
 /* === 6.2.A Section === */
 
-.section__title {
+.section__title,
+.card__title {
     font-size: var(--font-xl);
 }
 
@@ -341,10 +352,36 @@ img {
     .main-wrapper {
         padding: 3rem 2rem;
     }
+
+    /* === 1.2.A Card === */
+
+    .card {
+        grid-template-columns: auto 1fr;
+    }
+
+    .card__image,
+    .card__link,
+    .card__text {
+        grid-column-start: span 2;
+    }
+
+    .card__title {
+        grid-column-start: 1;
+    }
+
+    .card__caption {
+        grid-column-start: 2;
+        justify-self: end;
+    }
+
+    .card__title,
+    .card__caption {
+        align-self: center;
+    }
 }
 
 
-@media (min-width: 950px) {
+@media (min-width: 1050px) {
 
     /* ===============
         1.0 VARIABLES
@@ -380,6 +417,44 @@ img {
     .navigation__menu {
         grid-template-columns: repeat(3, auto);
         justify-content: end;
+    }
+
+    /* === 2.2 Card === */
+
+    .card {
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .card__image {
+        grid-column-start: 1;
+        grid-row-start: span 4;
+    }
+
+    .card__link,
+    .card__text,
+    .card__title {
+        grid-column-start: 2;
+        justify-self: start;
+    }
+
+    .card__caption {
+        grid-column-start: 1;
+        grid-row-start: 5;
+        justify-self: start;
+    }
+
+    .card__title {
+        grid-row-start: 1;
+        align-self: start;
+    }
+
+    .card__text {
+        grid-row-start: 2;
+    }
+
+    .card__link {
+        grid-row-start: 3;
     }
 
 }
