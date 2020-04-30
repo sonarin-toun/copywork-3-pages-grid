@@ -25,7 +25,7 @@
     1.0 RESET
    =============== */
 
-* {
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -159,6 +159,18 @@ img {
     justify-content: center;
 }
 
+/* === 4.5. Main Section Grid === */
+
+/* === 4.4.A Section Grid === */
+
+.hero__image {
+    grid-row-start: 1;
+}
+
+.caption {
+    grid-row-start: 2;
+}
+
 /* =================================================
     5.0 Layout, Spacing, Border and Background Color
     ============================================ */
@@ -172,6 +184,24 @@ img {
 
 .title-container {
     margin-bottom: 2rem;
+}
+
+/* === 5.2 Main === */
+
+.main-wrapper {
+    padding: 3rem 1rem;
+}
+
+/* === 5.2.A Section === */
+
+.hero-section,
+.sub-section {
+    margin-bottom: 2rem;
+}
+
+.section_border {
+    border-bottom: solid 1px var(--neutral-color-gray);
+    padding-bottom: 2rem;
 }
 
 /* === 5.2.A Caption === */
@@ -212,6 +242,11 @@ img {
     letter-spacing: 2px;
 }
 
+.sub-section__title {
+    font-size: var(--font-lg);
+    color: var(--supporting-color);
+}
+
 /* === 6.1.A Navigation === */
 
 .navigation__menu {
@@ -243,6 +278,46 @@ img {
     border-bottom: 2px solid #707070;
 }
 
+/* === 6.2 Main === */
+
+/* === 6.2.A Section === */
+
+.section__title {
+    font-size: var(--font-xl);
+}
+
+/* === 6.2.B Paragraph === */
+
+.paragraph__text {
+    font-size: var(--font-base);
+}
+
+.paragraph__link {
+    color: var(--supporting-color);
+}
+
+.paragraph__link:hover,
+.paragraph__link:focus {
+    color: var(--primary-color);
+}
+
+.read-more-link {
+    font-size: var(--font-sm);
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.read-more-link:hover,
+.read-more-link:focus {
+    color: var(--primary-color);
+}
+
+/* === 6.2.C Caption === */
+
+.caption__element {
+    list-style-type: none;
+    font-size: var(--font-xs);
+}
 
 /* ===============
     I. MEDIA QUERY
@@ -261,44 +336,50 @@ img {
         padding-left: 2rem;
     }
 
+    /* === 1.2 Main === */
 
-    @media (min-width: 950px) {
+    .main-wrapper {
+        padding: 3rem 2rem;
+    }
+}
 
-        /* ===============
+
+@media (min-width: 950px) {
+
+    /* ===============
         1.0 VARIABLES
     =============== */
 
-        :root {
+    :root {
 
-            /* === 1.1 Font Size === */
+        /* === 1.1 Font Size === */
 
-            --font-xs: 0.875rem;
-            --font-sm: 1rem;
-            --font-base: 1.125rem;
-            --font-md: 1.25rem;
-            --font-lg: 1.5rem;
-            --font-xl: 1.75rem;
-            --font-2xl: 2.25rem;
+        --font-xs: 0.875rem;
+        --font-sm: 1rem;
+        --font-base: 1.125rem;
+        --font-md: 1.25rem;
+        --font-lg: 1.5rem;
+        --font-xl: 1.75rem;
+        --font-2xl: 2.25rem;
 
-            /* === 1.2 Alignment === */
+        /* === 1.2 Alignment === */
 
-            --align-text: left;
-        }
+        --align-text: left;
+    }
 
-        /* ===============
+    /* ===============
         2.0 Grid
     =============== */
 
-        /* === 2.1 Header Grid === */
+    /* === 2.1 Header Grid === */
 
-        .header-wrapper {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .navigation__menu {
-            grid-template-columns: repeat(3, auto);
-            justify-content: end;
-        }
-
+    .header-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+
+    .navigation__menu {
+        grid-template-columns: repeat(3, auto);
+        justify-content: end;
+    }
+
 }
