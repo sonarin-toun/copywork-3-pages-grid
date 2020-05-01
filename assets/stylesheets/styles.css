@@ -60,8 +60,9 @@ img {
     /* === 2.1 Color === */
 
     --primary-color: #143774;
-    --supporting-color: #1792D2;
+    --supporting-color: #1792d2;
     --neutral-color-gray: #707070;
+    --neutral-color-light-gray: #EBEBEB;
     --neutral-color-light: #f8f8f8;
 
     /* === 2.2 Font Size === */
@@ -97,7 +98,7 @@ img {
 body {
     font-family: 'Ubuntu', sans-serif;
     color: #707070;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 img {
@@ -108,6 +109,11 @@ img {
 .max-width {
     margin: 0 auto;
     max-width: 1200px;
+}
+
+.bottom_border {
+    border-bottom: solid 1px var(--neutral-color-gray);
+    padding-bottom: 1rem;
 }
 
 /* ====================
@@ -173,6 +179,12 @@ img {
     grid-row-start: 2;
 }
 
+/* === 4.6 Aside === */
+
+.post__title {
+    grid-row-start: 2;
+}
+
 
 /* =================================================
     5.0 Layout, Spacing, Border and Background Color
@@ -191,20 +203,16 @@ img {
 
 /* === 5.2 Main === */
 
-.main-wrapper {
-    padding: 3rem 1rem;
+.main-aside-wrapper {
+    padding: 3rem 1rem 3rem 1rem;
 }
 
 /* === 5.2.A Section === */
 
 .hero-section,
 .sub-section {
-    margin-bottom: 2rem;
-}
-
-.section_border {
-    border-bottom: solid 1px var(--neutral-color-gray);
-    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
 }
 
 /* === 5.2.B Caption === */
@@ -224,6 +232,19 @@ img {
 
 .card {
     margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* === 5.3. Aside === */
+
+
+.sidebar_border {
+    border: 1rem var(--neutral-color-light-gray) solid;
+    padding: 2rem;
+}
+
+.sidebar__about,
+.sidebar__recent-post {
     margin-bottom: 3rem;
 }
 
@@ -315,7 +336,9 @@ img {
 .read-more-link {
     font-size: var(--font-sm);
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+
+    transition: color 0.2s;
 }
 
 .read-more-link:hover,
@@ -330,6 +353,25 @@ img {
     font-size: var(--font-xs);
 }
 
+/* === 6.3. Aside === */
+
+.sidebar__title {
+    font-size: var(--font-md);
+    color: var(--primary-color);
+    letter-spacing: 2px;
+}
+
+.sidebar__text {
+    font-size: var(--font-sm);
+}
+
+.post__title {
+    font-size: var(--font-md);
+}
+
+/* === 6.3.1 About === */
+
+
 /* ===============
     I. MEDIA QUERY
    =============== */
@@ -340,18 +382,23 @@ img {
         1.0 Layout, Spacing, Border and Background Color
     =================================================== */
 
-    /* === 1.1 Header === */
+    /* sidebar=== 1.1 Header === */
 
-    .header-wrapper {
+    .site-header {
         padding-right: 2rem;
         padding-left: 2rem;
     }
 
     /* === 1.2 Main === */
 
-    .main-wrapper {
-        padding: 3rem 2rem;
+    .main-aside-wrapper {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
+
+    /* ===============
+        2.0 Grid
+    =============== */
 
     /* === 1.2.A Card === */
 
@@ -404,11 +451,45 @@ img {
         --align-text: left;
     }
 
+    /* =================================================
+        2.0 Layout, Spacing, Border and Background Color
+    =================================================== */
+
+    /* sidebar=== 2.1 Header === */
+
+    .site-header {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+
+
+    /* === 2.2 Main === */
+
+    .main-aside-wrapper {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+
     /* ===============
         2.0 Grid
     =============== */
 
-    /* === 2.1 Header Grid === */
+    /* === 2.1 Global === */
+
+    .main-aside-wrapper {
+        grid-template-columns: 3fr 300px;
+    }
+
+    .site-main {
+        grid-column-start: 1;
+    }
+
+    .site-sidebar {
+        grid-column-start: 2;
+    }
+
+    /* === 2.2 Header Grid === */
 
     .header-wrapper {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -419,7 +500,7 @@ img {
         justify-content: end;
     }
 
-    /* === 2.2 Card === */
+    /* === 2.3 Card === */
 
     .card {
         grid-template-columns: 200px 1fr;
@@ -455,6 +536,15 @@ img {
 
     .card__link {
         grid-row-start: 3;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .main-aside-wrapper {
+        padding-left: 0;
+        padding-right: 0;
     }
 
 }
