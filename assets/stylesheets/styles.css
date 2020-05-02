@@ -185,6 +185,13 @@ img {
     grid-row-start: 2;
 }
 
+/* === 4.7 Footer === */
+
+.footer {
+    justify-items: center;
+    align-items: center;
+}
+
 
 /* =================================================
     5.0 Layout, Spacing, Border and Background Color
@@ -246,6 +253,13 @@ img {
 .sidebar__about,
 .sidebar__recent-post {
     margin-bottom: 3rem;
+}
+
+/* === 5.3. Aside === */
+
+.footer {
+    padding: 3rem;
+    background-color: var(--primary-color);
 }
 
 /* =====================
@@ -369,8 +383,11 @@ img {
     font-size: var(--font-md);
 }
 
-/* === 6.3.1 About === */
+/* === 6.4 Footer === */
 
+.footer {
+    color: var(--neutral-color-light-gray);
+}
 
 /* ===============
     I. MEDIA QUERY
